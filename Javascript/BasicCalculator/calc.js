@@ -4,14 +4,28 @@
 window.addEventListener("load", initEvents);
 
 function initEvents() {
-    document.querySelector("#add").addEventListener("click", add);
+    document.querySelector("#add").addEventListener("click", ()=>calculate(1));
+    document.querySelector("#sub").addEventListener("click", ()=>calculate(2));
+    document.querySelector("#div").addEventListener("click", ()=>calculate(3));
+    document.querySelector("#mul").addEventListener("click", ()=>calculate(4));
 }
 
 
-function add() {
+function calculate(num) {
     // console.log("Button Clicked...");
     var fnum = parseInt(document.querySelector("#box-1").value);
     var snum = parseInt(document.querySelector("#box-2").value);
-    var result = fnum + snum;
+    if(num == 1){
+        var result = fnum + snum;
+    }
+    else if(num == 2){
+        var result = fnum - snum;
+    }
+    else if(num == 3){
+        var result = fnum / snum;
+    }
+    else{
+        var result = fnum * snum;
+    }
     document.querySelector("#box-3").value = result;
 }
