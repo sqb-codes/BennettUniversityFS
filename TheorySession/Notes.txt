@@ -1,0 +1,37 @@
+Basic Syntax
+Ways to use JS
+ - Head / Body / External JS
+Variables
+ - var / let / const
+Data Types
+Operators
+Nullish Coalescing Operator - '??'
+If Else
+Loops
+For Loop
+  - Simple For Loop
+  - For...in
+  - Foreach
+Switch Case
+Functions
+  - Functions are first class citizen
+
+Pre defined
+ - alert, confirm...
+
+User defined
+
+Scope of variables
+- local
+- global
+
+
+
+
+
+
+
+
+
+
+

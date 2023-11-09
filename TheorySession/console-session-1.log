@@ -1,0 +1,127 @@
+var x = 12;
+undefined
+typeof x
+'number'
+var x1 = new Number();
+undefined
+x1
+Number {0}
+var x1 = new Number(12);
+undefined
+x
+12
+x1
+Number {12}
+x == x1
+true
+x === x1
+false
+typeof x1
+'object'
+var obj = {"id" : 101, "name" : "Ram", "age" : 20}
+undefined
+obj
+{id: 101, name: 'Ram', age: 20}age: 20id: 101name: "Ram"[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+x1 instanceof Number
+true
+x1 instanceof Object
+true
+Number instanceof Object
+true
+typeof Number
+'function'
+typeof Object
+'function'
+var name;
+undefined
+name
+''
+typeof name
+'string'
+var lastname;
+undefined
+typeof lastname
+'undefined'
+var lastname = null;
+undefined
+typeof lastname
+'object'
+const num = 12212n;
+undefined
+typeof num
+'bigint'
+var n = 2321231231231231256453423;
+undefined
+n
+2.3212312312312313e+24
+var n = 2321231231231231256453423n;
+undefined
+n
+2321231231231231256453423n
+2 * 5
+10
+2 ** 5
+32
+let username;
+undefined
+username ?? "User name not defined";
+'User name not defined'
+output = (username !== null && username !== undefined) ? username : "Username not defined";
+'Username not defined'
+output
+'Username not defined'
+username = "Ram";
+'Ram'
+(username !== null && username !== undefined) ? username : "Username not defined";
+'Ram'
+username ?? "User name not defined";
+'Ram'
+obj
+{id: 101, name: 'Ram', age: 20}
+for(var o in obj) {
+    console.log(o);
+}
+VM1264:2 id
+VM1264:2 name
+VM1264:2 age
+undefined
+for(var o in obj) {
+    console.log(o + " : " + obj[o]);
+}
+VM1334:2 id : 101
+VM1334:2 name : Ram
+VM1334:2 age : 20
+undefined
+alert("hello")
+undefined
+function showPerson() {
+    let msg = "Welcome to Bennett...";
+    alert(msg);
+}
+undefined
+showPerson()
+undefined
+function add() {
+    firstnumber = 10;
+    secondnumber = 20;
+    console.log(firstnumber + secondnumber);
+}
+undefined
+add();
+VM1663:4 30
+undefined
+alert(firstnumber * secondnumber);
+undefined
+function add() {
+    var firstnumber_1 = 10;
+    var secondnumber_1 = 20;
+    console.log(firstnumber_1 + secondnumber_1);
+}
+undefined
+add()
+VM1778:4 30
+undefined
+alert(firstnumber_1 * secondnumber_1);
+VM1810:1 Uncaught ReferenceError: firstnumber_1 is not defined
+    at <anonymous>:1:7
+(anonymous) @ VM1810:1
