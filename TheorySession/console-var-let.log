@@ -1,0 +1,52 @@
+function show() {
+    var a = 12;
+    if(a == 12) {
+        a += 5;
+    }
+    console.log("A is :",a);
+}
+undefined
+show()
+VM91:6 A is : 17
+undefined
+function show() {
+    let a = 12;
+    if(a == 12) {
+        a += 5;
+    }
+    console.log("A is :",a);
+}
+undefined
+show()
+VM115:6 A is : 17
+undefined
+function show() {
+    var a = 12;
+    if(a == 12) {
+        let msg = "hello user..."
+        a += 5;
+    }
+    console.log("Msg is :",msg);
+    console.log("A is :",a);
+}
+undefined
+show()
+VM226:7 Uncaught ReferenceError: msg is not defined
+    at show (<anonymous>:7:28)
+    at <anonymous>:1:1
+show @ VM226:7
+(anonymous) @ VM242:1
+function show() {
+    var a = 12;
+    if(a == 12) {
+        var msg = "hello user..."
+        a += 5;
+    }
+    console.log("Msg is :",msg);
+    console.log("A is :",a);
+}
+undefined
+show()
+VM250:7 Msg is : hello user...
+VM250:8 A is : 17
+undefined
