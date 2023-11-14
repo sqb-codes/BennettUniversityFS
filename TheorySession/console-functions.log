@@ -1,0 +1,248 @@
+function show(msg) {
+    console.log(msg);
+}
+undefined
+show("Hello");
+VM87:2 Hello
+undefined
+function show(username, msg) {
+    console.log(msg + " from " + username);
+}
+undefined
+show("Ravi", "Hello")
+VM200:2 Hello from Ravi
+undefined
+function show(username, msg = "Greetings") {
+    console.log(msg + " from " + username);
+}
+undefined
+show("Ravi")
+VM256:2 Greetings from Ravi
+undefined
+show("Ravi", "Hello")
+VM256:2 Hello from Ravi
+undefined
+function add(x, y) {
+    console.log(x + y);
+}
+undefined
+add(4,6)
+VM351:2 10
+undefined
+add(4,6, 7)
+VM351:2 10
+undefined
+add(4,6, 7, 8)
+VM351:2 10
+undefined
+function add(...x) {
+    console.log(x);
+}
+undefined
+add(4)
+VM439:2 [4]
+undefined
+add(4,6)
+VM439:2 (2) [4, 6]
+undefined
+add(4,6,8)
+VM439:2 (3) [4, 6, 8]
+undefined
+add(4,6,8,5)
+VM439:2 (4) [4, 6, 8, 5]
+undefined
+add(4,6,8,5,11)
+VM439:2 (5) [4, 6, 8, 5, 11]
+undefined
+function add(...x) {
+    let sum = 0;
+    for(var i = 0; i < x.length; i++) {
+        sum += x[i];    
+    }
+    console.log("Sum is : " + sum);
+}
+undefined
+add()
+VM656:6 Sum is : 0
+undefined
+add(4)
+VM656:6 Sum is : 4
+undefined
+add(4,6)
+VM656:6 Sum is : 10
+undefined
+add(4,6,7)
+VM656:6 Sum is : 17
+undefined
+add(4,6,7,7)
+VM656:6 Sum is : 24
+undefined
+add(4,6,7,7,12)
+VM656:6 Sum is : 36
+undefined
+function add() {
+    console.log(arguments);
+}
+undefined
+add()
+VM803:2 Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]callee: ƒ add()length: 0Symbol(Symbol.iterator): ƒ values()[[Prototype]]: Object
+undefined
+function add() {
+    let sum = 0;
+    for(var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];    
+    }
+    console.log("Sum is : " + sum);
+}
+undefined
+add()
+VM905:6 Sum is : 0
+undefined
+add(12)
+VM905:6 Sum is : 12
+undefined
+add(12,5)
+VM905:6 Sum is : 17
+undefined
+add(12,5,76)
+VM905:6 Sum is : 93
+undefined
+add(12,5,76,8)
+VM905:6 Sum is : 101
+undefined
+let doSum = add(4, 5);
+VM905:6 Sum is : 9
+undefined
+doSum
+undefined
+function add() {
+    let sum = 0;
+    for(var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];    
+    }
+    console.log("Sum is : " + sum);
+    return sum;
+}
+undefined
+let doSum = add(4, 5);
+VM1069:6 Sum is : 9
+undefined
+doSum
+9
+let doSum = add;
+undefined
+add
+ƒ add() {
+    let sum = 0;
+    for(var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];    
+    }
+    console.log("Sum is : " + sum);
+    return sum;
+}
+doSum
+ƒ add() {
+    let sum = 0;
+    for(var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];    
+    }
+    console.log("Sum is : " + sum);
+    return sum;
+}
+doSum(3,5,6)
+VM1069:6 Sum is : 14
+14
+function calc() {
+    function add(x, y) {
+        return x + y;
+    }
+    function sub() {
+        return x - y;
+    }
+}
+undefined
+calc()
+undefined
+function calc() {
+    function addition(x, y) {
+        return x + y;
+    }
+    function subtraction() {
+        return x - y;
+    }
+}
+undefined
+calc()
+undefined
+addition()
+VM1462:1 Uncaught ReferenceError: addition is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1462:1
+function calc() {
+    function addition(x, y) {
+        return x + y;
+    }
+    return addition;
+}
+undefined
+calc()
+ƒ addition(x, y) {
+        return x + y;
+    }
+let doSum = calc();
+undefined
+doSum
+ƒ addition(x, y) {
+        return x + y;
+    }
+doSum(4,5)
+9
+function calc() {
+    function addition(x, y) {
+        return x + y;
+    }
+    return addition(4,5);
+}
+undefined
+calc()
+9
+function calc() {
+    function addition(x, y) {
+        return x + y;
+    }
+    return addition;
+}
+undefined
+calc()
+ƒ addition(x, y) {
+        return x + y;
+    }
+function calc() {
+    return function(x, y) {
+        return x + y;
+    }
+    return addition;
+}
+undefined
+calc()
+ƒ (x, y) {
+        return x + y;
+    }
+function calc() {
+    return function(x, y) {
+        return x + y;
+    }
+}
+undefined
+calc()
+ƒ (x, y) {
+        return x + y;
+    }
+let doSum = calc();
+undefined
+doSum
+ƒ (x, y) {
+        return x + y;
+    }
+doSum(4,5);
+9
