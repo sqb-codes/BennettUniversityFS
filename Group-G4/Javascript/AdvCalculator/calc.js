@@ -33,6 +33,10 @@ function appendNumber() {
 
 function appendOperator() {
     // get the innerHTML of clicked button and append in textbox
+    let temp = expression.charAt(expression.length - 1);
+    if(temp === "+" ||  temp === "-" || temp === "*" || temp === "/" || temp === "log"){
+        expression = expression.substring(0, expression.length - 1);
+    }
     expression += this.innerHTML;
     box.value = expression;
 }

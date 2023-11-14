@@ -7,13 +7,20 @@
 body{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     gap: 2rem;
-    transform: translateY(-80px);
+    height: 100vh;
+    width: 100%;
+    transform: translateY(-100px);
 }
 
 table{
