@@ -1,0 +1,277 @@
+var x = 12;
+undefined
+typeof x;
+'number'
+var y = Number(12);
+undefined
+typeof y;
+'number'
+var y = new Number(12);
+undefined
+typeof y;
+'object'
+y
+Number {12}[[Prototype]]: Numberconstructor: ƒ Number()toExponential: ƒ toExponential()toFixed: ƒ toFixed()toLocaleString: ƒ toLocaleString()toPrecision: ƒ toPrecision()toString: ƒ toString()valueOf: ƒ valueOf()[[Prototype]]: Object[[PrimitiveValue]]: 0[[PrimitiveValue]]: 12
+x
+12
+x == y
+true
+x === y
+false
+Number
+ƒ Number() { [native code] }
+Object
+ƒ Object() { [native code] }
+y instanceof Number
+true
+x instanceof Number
+false
+Number instanceof Object
+true
+function calc() {
+    fnum = 12;
+    snum = 20;
+    res = fnum + snum;
+    console.log("Sum is : ",res);
+}
+undefined
+calc()
+VM465:5 Sum is :  32
+undefined
+var res = fnum - snum;
+undefined
+res
+-8
+function calc() {
+    fnum_1 = 12;
+    snum_2 = 20;
+    res = fnum_1 + snum_1;
+    console.log("Sum is : ",res);
+}
+undefined
+calc()
+VM549:4 Uncaught ReferenceError: snum_1 is not defined
+    at calc (<anonymous>:4:20)
+    at <anonymous>:1:1
+calc @ VM549:4
+(anonymous) @ VM567:1
+function calc() {
+    fnum_1 = 12;
+    snum_1 = 20;
+    res = fnum_1 + snum_1;
+    console.log("Sum is : ",res);
+}
+undefined
+calc()
+VM575:5 Sum is :  32
+undefined
+function calc() {
+    var fnum_2 = 12;
+    var snum_2 = 20;
+    var res = fnum_2 + snum_2;
+    console.log("Sum is : ",res);
+}
+undefined
+calc()
+VM644:5 Sum is :  32
+undefined
+var res = fnum_2 - snum_2;
+VM686:1 Uncaught ReferenceError: fnum_2 is not defined
+    at <anonymous>:1:11
+(anonymous) @ VM686:1
+function show() {
+    var name = "Ravi";
+    if(x == 12) {
+        name = "Ram";
+    }
+    console.log("Name is : "+name);
+}
+undefined
+show()
+VM808:6 Name is : Ram
+undefined
+function show() {
+    let name = "Ravi";
+    if(x == 12) {
+        name = "Ram";
+    }
+    console.log("Name is : "+name);
+}
+undefined
+show();
+VM834:6 Name is : Ram
+undefined
+function show() {
+    if(x == 12) {
+        var name = "Ram";
+    }
+    console.log("Name is : "+name);
+}
+undefined
+show();
+VM869:5 Name is : Ram
+undefined
+function show() {
+    if(x == 12) {
+        let name = "Ram";
+    }
+    console.log("Name is : "+name);
+}
+undefined
+show();
+VM901:5 Name is : 
+undefined
+function show(x,y) {
+    return x + y;
+}
+undefined
+show();
+NaN
+show(4);
+NaN
+show(4,7);
+11
+show(4,7,7,9);
+11
+function add(...x) {
+    let sum = 0;
+    for(var i = 0; i < x.length; i++) {
+        sum += x[i];    
+    }
+    console.log("Sum is : " + sum);
+}
+undefined
+add(3);
+VM1064:6 Sum is : 3
+undefined
+add(3,6);
+VM1064:6 Sum is : 9
+undefined
+add(3,6,7);
+VM1064:6 Sum is : 16
+undefined
+add(3,6,7,8);
+VM1064:6 Sum is : 24
+undefined
+function add() {
+    let sum = 0;
+    for(var i = 0; i < arguments.length; i++) {
+        sum += x[i];    
+    }
+    console.log("Sum is : " + sum);
+}
+undefined
+add(4)
+VM1141:6 Sum is : NaN
+undefined
+function add() {
+    let sum = 0;
+    for(var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];    
+    }
+    console.log("Sum is : " + sum);
+}
+undefined
+add(4)
+VM1179:6 Sum is : 4
+undefined
+add(4,7)
+VM1179:6 Sum is : 11
+undefined
+add(4,7,8)
+VM1179:6 Sum is : 19
+undefined
+show(3,5)
+8
+var sum = show(3,5);
+undefined
+sum
+8
+var sum = show;
+undefined
+sum
+ƒ show(x,y) {
+    return x + y;
+}
+sum(3,4);
+7
+function calc() {
+    function add(x,y) {
+        return x + y;
+    }
+}
+undefined
+add(4,5);
+VM1179:6 Sum is : 9
+undefined
+function calc() {
+    function addition(x,y) {
+        return x + y;
+    }
+}
+undefined
+addition(5,7);
+VM1474:1 Uncaught ReferenceError: addition is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1474:1
+calc();
+undefined
+addition(5,7);
+VM1500:1 Uncaught ReferenceError: addition is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1500:1
+function calc() {
+    function addition(x,y) {
+        return x + y;
+    }
+    return addition;
+}
+undefined
+calc()
+ƒ addition(x,y) {
+        return x + y;
+    }
+var addition = calc();
+undefined
+addition(4,7);
+11
+calc().addition
+undefined
+calc()
+ƒ addition(x,y) {
+        return x + y;
+    }
+function calc() {
+    function addition(x,y) {
+        return x + y;
+    }
+    function subtraction(x,y) {
+        return x - y;
+    }
+    return addition, subtraction;
+}
+undefined
+calc();
+ƒ subtraction(x,y) {
+        return x - y;
+    }
+function calc() {
+    function addition(x,y) {
+        return x + y;
+    }
+    function subtraction(x,y) {
+        return x - y;
+    }
+    return [addition, subtraction];
+}
+undefined
+calc();
+(2) [ƒ, ƒ]
+calc()[0]
+ƒ addition(x,y) {
+        return x + y;
+    }
+calc()[1]
+ƒ subtraction(x,y) {
+        return x - y;
+    }
