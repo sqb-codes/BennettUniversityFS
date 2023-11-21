@@ -1,0 +1,15 @@
+table {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.btn {
+    font-size: 4rem;
+    width: 400px;
+    height: 200px;
+    background-color: red;
+    color: #fff;
+}
+.btn:hover {
+    background-color: lightcoral;
+}
