@@ -1,0 +1,54 @@
+function Student(id, name, course) {
+    this.id = id;
+    this.name = name;
+    this.course = course;
+}
+undefined
+var obj_1 = new Student(101, "Ram", "Btech");
+undefined
+obj_1
+Student {id: 101, name: 'Ram', course: 'Btech'}course: "Btech"id: 101name: "Ram"[[Prototype]]: Objectconstructor: ƒ Student(id, name, course)[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+obj_1.id
+101
+obj_1.sem = 5;
+5
+var obj_2 = new Student(102, "Shyam", "MCA");
+undefined
+obj_2;
+Student {id: 102, name: 'Shyam', course: 'MCA'}
+let obj = {emp_id : 1001, emp_name : "Ram", emp_salary : 50000};
+undefined
+obj
+{emp_id: 1001, emp_name: 'Ram', emp_salary: 50000}emp_id: 1001emp_name: "Ram"emp_salary: 50000[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+let obj = {emp_id : 1001, emp_name : "Ram", emp_salary : 50000, 
+           emp_details : function() {
+               console.log("Emp Name : " + emp_name);
+           }
+          };
+undefined
+obj.emp_id
+1001
+obj.emp_details()
+VM612:3 Uncaught ReferenceError: emp_name is not defined
+    at Object.emp_details (<anonymous>:3:44)
+    at <anonymous>:1:5
+emp_details @ VM612:3
+(anonymous) @ VM651:1
+let obj = {emp_id : 1001, emp_name : "Ram", emp_salary : 50000, 
+           emp_details : function() {
+               console.log("Emp Name : " + obj.emp_name);
+           }
+          };
+undefined
+obj.emp_details()
+VM664:3 Emp Name : Ram
+undefined
+let obj = {emp_id : 1001, emp_name : "Ram", emp_salary : 50000, 
+           emp_details : function() {
+               console.log("Emp Name : " + this.emp_name);
+           }
+          };
+undefined
+obj.emp_details()
+VM697:3 Emp Name : Ram
+undefined
