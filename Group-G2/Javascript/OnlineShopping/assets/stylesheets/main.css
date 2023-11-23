@@ -1,0 +1,14 @@
+#products ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+#products ul li {
+    width: 20%;
+}
+
+#products ul li h3{
+    font-size: 1.2em;
+    text-align: center;
+}
