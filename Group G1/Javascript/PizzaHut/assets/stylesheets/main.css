@@ -1,0 +1,50 @@
+#banner {
+    margin-bottom: 50px;
+}
+#banner img {
+    height: calc(100vh - 300px);
+}
+
+#products h2 {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid red;
+}
+#pizzaList, #sideList {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sideList li {
+    width: 300px;
+}
+
+#pizzaList li img, #sideList li img{
+    height: 300px;
+}
+
+#sideList li h4 {
+    font-size: 14px;
+}
+
+#cartList {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#cartList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#cartList li img {
+    width: 20%;
+}
+#cartList li h5 {
+    width: 40%;
+    font-size: 15px;
+}
+#cartList li button {
+    width: 20%;
+}
