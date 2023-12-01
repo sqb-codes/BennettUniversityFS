@@ -12,3 +12,29 @@
     font-size: 1.2em;
     text-align: center;
 }
+
+#cart-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#cart-list li{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+#cart-list li img {
+    width: 15%;
+}
+
+#cart-list li h5 {
+    width: 60%;
+}
+
+#cart-list li .btn {
+    width: 20%;
+}
